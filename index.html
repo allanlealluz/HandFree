@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HandFree</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">HandFree</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#como-usar">Como Usar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center py-5 d-flex align-items-center" style="min-height: 100vh;">
+    <div class="container">
+      <img src="logo.png" alt="Logo HandFree">
+      <h1 class="display-3 fw-bold">HandFree</h1>
+      <p class="lead mb-4">Tecnologia acessível para todos: controle seus dispositivos com voz e movimento.</p>
+      <a href="#contato" class="btn btn-light btn-lg shadow">Participe dos testes</a>
+    </div>
+  </header>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-5">
+    <div class="container">
+      <h2>Sobre o Projeto</h2>
+      <p class="text-center mx-auto" style="max-width: 800px;">
+        O <strong>HandFree</strong> é uma plataforma inclusiva desenvolvida para ajudar pessoas com deficiência visual e motora a interagirem com dispositivos eletrônicos usando apenas a voz ou movimentos simples. 
+        Nosso objetivo é promover <em>autonomia, independência e inclusão digital</em>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Funcionalidades -->
+  <section id="funcionalidades" class="py-5 bg-light">
+    <div class="container">
+      <h2>Funcionalidades</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card feature-card h-100 text-center p-3">
+            <i class="bi bi-mic fs-1 text-primary"></i>
+            <h5 class="mt-3">Comandos de Voz</h5>
+            <p>Integração com assistentes virtuais e comandos personalizáveis.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card h-100 text-center p-3">
+            <i class="bi bi-camera-video fs-1 text-primary"></i>
+            <h5 class="mt-3">Controle por Movimentos</h5>
+            <p>Utilize webcam ou sensores para interagir de forma simples e intuitiva.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card h-100 text-center p-3">
+            <i class="bi bi-hdd-network fs-1 text-primary"></i>
+            <h5 class="mt-3">Integração IoT</h5>
+            <p>Compatibilidade com dispositivos inteligentes e interface responsiva.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Usar -->
+  <section id="como-usar" class="py-5">
+    <div class="container">
+      <h2>Como Usar</h2>
+      <p class="text-center mx-auto" style="max-width: 700px;">
+        Para utilizar o <strong>HandFree</strong>, basta um navegador moderno com permissão de microfone ou webcam ativada. 
+        Em breve, disponibilizaremos uma versão beta para testes. Fique atento às novidades!
+      </p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-5 bg-light">
+    <div class="container">
+      <h2>Contato</h2>
+      <p class="text-center mb-4">Quer saber mais ou participar dos testes? Fale conosco:</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form class="p-4 bg-white rounded shadow">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="mensagem" class="form-label">Mensagem</label>
+              <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 HandFree. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar transparente -> sólida ao rolar
+    window.addEventListener("scroll", function() {
+      const navbar = document.querySelector(".navbar");
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
