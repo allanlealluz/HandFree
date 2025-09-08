@@ -30,3 +30,80 @@
     footer {
       background: #111;
     }
+     /* Estilos essenciais para a câmera mantidos aqui */
+    .camera-container {
+      position: relative;
+      max-width: 640px;
+      margin: 0 auto;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    .camera-feed {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .camera-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+    .control-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .control-btn.start { background: #28a745; }
+    .control-btn.stop { background: #dc3545; }
+    .control-btn.capture { background: #007bff; }
+    .control-btn:hover { transform: scale(1.1); }
+    .status-indicator {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #dc3545;
+      animation: pulse 2s infinite;
+    }
+    .status-indicator.active { background: #28a745; }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+    .camera-placeholder {
+      background: #f8f9fa;
+      border: 2px dashed #dee2e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 480px;
+      color: #6c757d;
+    }
+    .canvas-container { margin-top: 20px; }
+    .captured-image {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilo para a navbar rolar a tela, comum em ambos os arquivos */
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.9) !important;
+      transition: all 0.3s ease;
+    }
